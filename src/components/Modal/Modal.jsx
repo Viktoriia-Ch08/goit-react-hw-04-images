@@ -14,7 +14,7 @@ export default function Modal({ onClose, name, bigImg }) {
     window.addEventListener('keydown', closeByEscape);
 
     return () => {
-      window.addEventListener('keydown', closeByEscape);
+      window.removeEventListener('keydown', closeByEscape);
     };
   }, [onClose]);
 
